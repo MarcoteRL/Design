@@ -1,0 +1,12 @@
+li a:link{
+    text-decoration: none;
+    color:red;
+}
+li a:active{
+    color:orange;
+}
+
+li a:visited{
+    color:rgb(21, 65, 21);
+}
+
