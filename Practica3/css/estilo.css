@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+/* Definimos el tipo de letra por defecto */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #85aaeb;
+}
+
+/* Los títulos de primer nivel tendrán una pequeña sombra
+  y estarán alineados a la izquierda y separados de la base
+  por 20px*/
+h1{
+  color: #333;
+  text-shadow: 0px 1px 3px #FFFFFF;
+  font-family: sans-serif;
+  left: 0px;
+  bottom: 20px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+/* Las líneas horizontales las pondremos con puntos de 1px,
+  color #666666 y separados por arriba y por abajo en 10px,
+  y por la derecha e izquierda en 20px*/
+hr{
+  margin: 10px 20px;
+  border: 1px dashed #666;
+}
+
+/* Sombra utilizada para textos*/
+.sombraT{
+  text-shadow: 0px 1px 3px #FFFFFF;
+}
+
+
+
+/* Contenedor general para todo el 'body'
+  por si queremos mover o modificar la página completa */
+/* #todo{
+  margin: 0px auto;
+  float: left;
+} */
+
+/* Contenedor para el 'membrete' con su logo y el menú */
+#cabecera{text-align: center;}
+
+/* Caja de esquinas redondeadas para la cabecera.
+  Le he puesto un gradiente que comienza al 85% del relleno verde.
+  Se le pone un color de fondo liso por si el navegador no admite
+  los degradados*/
+.cajaRedonda{
+  position: relative;
+  left: 0px;
+  height: 100px;
+  width:100%;
+}
+
+/* Contenedor del logotipo */
+.logo{
+  margin-left: 3%;
+  left:0px; 
+  margin-bottom: 0px; 
+  width: 200px; 
+  float:left;
+}
+
+/* modificamos los enlaces puestos en el logotipo */
+.logo h1{
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Texto y márgenes para el subtítulo del logo */
+.subtitulo{
+  color: #333;
+  left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0px;
+  text-align: left;
+}
+
+/*
+.subtitul p{
+  margin-left: 20px;
+  text-align: justify;
+}
+*/
+
+/* Contenedor para las distintas opciones que compondrá el menú*/
+.menu{  
+  float: right;
+  position: absolute;
+  margin-right: 15px;
+  right: 0px;
+  margin-right: 3%;
+  margin-bottom: 0px;
+}
+
+/* Definimos el tipo de lista desordenada */
+.menu ul{
+  margin-right: 0;
+  padding: 0; 
+  list-style: none; 
+  float:right; 
+}
+
+/* Cada elemento de la lista tendrá un tamaño determinado
+  con un degradado desde la izquierda que va del verde de la tarea
+  al blanco y termina en el mismo verde, una pequeña transparencia
+  y un redondeado de esquinas de 5px.
+  Se le pone un color de fondo liso por si el navegador no admite
+  los degradados*/
+.menu ul li {
+  float: left;
+  width: 90px;
+  margin-left:2px;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+} 
+
+/* Los enlaces del menú no tendrán decoración, utilizarán
+  una fuente pequeña del color que se indica para la tarea
+  que ocupará 2.1 veces del alto de la fuente, y en negrita */
+.menu ul li a {
+  display: block; 
+  line-height: 2.1em; 
+  text-decoration: none; 
+  color: #333;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-family: arial, sans-serif;
+} 
+
+/* Cuando nos posicionemos sobre una de las opciones, cambiará
+  el color de fondo con un degradado radial desde la izquierda
+  que va del naranja de la tarea al blanco y termina en el mismo
+  naranja. Le damos el mismo radio de redondeo de esquinas anterior.
+  Se le pone un color de fondo por si el navegador no admite los degradados*/
+.menu ul li a:hover {
+  font-size: 110%;
+  color:#3c74e6
+}
+
+/* Formato que tendrá la opción seleccionada.
+  Radio de esquinas de 5px, sombra del azul de la tarea que
+  al ponerla desde 0px sirve como resplandor, y color de fondo
+  degradado igual que el anterior. También ponemos un color de
+  fondo por si no se admite los degradados.
+  El color de letra se pone en #666666 */
+#activo {
+  color: #3c74e6 
+}
+
+/* Contenedor de todo el cuerpo de la página que va entre la
+  cabecera y el pie*/
+#cuerpo{
+  float: left;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/* Definimos el color de letra y grosor para todos los enlaces que
+  situemos en el 'cuerpo' (ya que todos pertenecerán a otro contenedor
+  dentro de éste)*/
+#cuerpo * a{
+  color: green;
+  font-weight: bold;
+}
+
+/* Definimos el texto y márgenes para todos los textos presentados en el
+  'cuerpo' con la etiqueta '<p>'*/
+#cuerpo * p{
+  text-align: justify;
+  margin: 0px 20px;
+}
+
+
+/* Contenedor para las tres columnas que compondrá el 'cuerpo'*/
+.cajaSecundaria{
+  width: 100%;
+}
+
+/* Los listados y los enlaces que contengan saldrán en verde y con letra pequeña */
+.cajaSecundaria * li,
+.cajaSecundaria * li a:visited{
+  color: #3E9722;
+  font-size: small;
+}
+
+/* Los enlaces de los listados saldrán en azul cuando nos posicionemos sobre ellos */
+.cajaSecundaria * li a:hover{
+  color: blue;
+}
+/* Contenedor para la columna de la izquierda, con el ancho determinado en la tarea */
+#izquierda{
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+  margin-left: 3%;
+}
+
+/* Definimos la apariencia de los títulos para las listas de definición de
+  la columna de la izquierda */
+#izquierda * dt{
+  margin-left: 20px;
+  font: 0.9em sans-serif, Arial, Helvetica;
+  font-weight: bold;
+}
+
+/* Definimos la apariencia de los datos para las listas de definición de
+  la columna de la izquierda */
+#izquierda * dd{
+  margin-left: 20px;
+  padding-bottom: 15px;
+}
+
+/* Contenedor para los distintos apartados (título de los temas).
+  Redondeo las esquinas superiores, defino la fuente y utilizo un
+  padding para separar el texto de los bordes del recuadro azul.
+  También pongo un margen inferior para separar el texto siguiente
+  de este contenedor.
+*/
+.subtitu{
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #3c74e6;
+  color: white;
+  font: 0.9em/1.4 Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+
+/* Contenedor para el formulario, que lo separa del borde izquierdo*/
+.separa{
+  padding-left: 20px;
+}
+
+/* Contenedor de la columna central con el tamaño y padding izquierdo
+  determinados en la tarea */
+#centro{
+  width: 50%;
+  height: 100%;
+  padding-left: 20px;
+  float: left;
+  position: relative;
+}
+
+/* Los listados tendrán un tipo de letra normal y de color negro */
+#centro li{
+  font: 1em Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+/* El tipo de letra cursiva, algo más pequeña de lo normal y con separación de
+  20px por todos lados excepto por arriba*/
+.italica{
+  margin: 0px 20px 20px 20px;
+  font: 0.9em sans-serif, Arial, Helvetica;
+  font-style: italic;
+}
+/* Contenedor para las fechas que se sitúan a la derecha del subtítulo */
+.fecha{
+  float: right;
+  font: 0.75em Arial, Helvetica, sans-serif bold white;
+}
+
+/* Definimos el tipo y tamaño de la letra utilizada para finalizar las noticias
+  centrales */
+.peque{
+  font: 0.5em Arial, Helvetica, sans-serif;
+  font-size: smaller;
+}
+
+/* Contenedor de la columna de la derecha, con el tamaño y padding indicados
+  en la tarea */
+#derecha{
+  background-color: #3c74e6;
+  margin-left: 3%;
+  border-radius: 20px;
+  width: 20%;
+  height: 100%;
+  padding-left: 20px;
+  float: left;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+/* Definimos cómo queremos que aparezcan los enlaces en la columna de la izquierda */
+#izquierda * a{
+  text-decoration: none;
+  font: 0.8em sans-serif, Arial, Helvetica;
+}
+
+/* Contenedor para la parte inferior de la página */
+#pie{
+  float: left;
+  position: relative;
+  left: 0px;
+}
+
+/* Definimos los enlaces del pie de página de color verde, según la tarea*/
+#pie * a{
+  color: green;
+}
+
+
+/* Imagen alargada que aparece en la columna de la derecha*/
+.imCentro{
+  float:left;
+  width: 100%;
+  text-align: center;
+}

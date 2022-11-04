@@ -1,0 +1,24 @@
+html {
+    font-family: Arial, Verdana;
+}
+
+h1 {
+    font-family: Georgia;
+    font-size: 2.5em;
+    font-variant: small-caps
+}
+
+h2 {
+    font-family: Georgia;
+    font-size: 1.5em;
+    font-style: italic;
+    font-variant: small-caps
+}
+
+li{
+    font-weight: bold;
+}
+
+strong{
+    font-weight: 300;
+}

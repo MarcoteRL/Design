@@ -1,0 +1,11 @@
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: url("../ejercicio5/flecha_inactiva.png");
+}
+
+li:active::before {
+    content: url("../ejercicio5/flecha_activa.png");
+}
