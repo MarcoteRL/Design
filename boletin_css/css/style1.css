@@ -1,12 +1,17 @@
-li a:link{
+li a:link {
     text-decoration: none;
-    color:red;
-}
-li a:active{
-    color:orange;
+    color: red;
 }
 
-li a:visited{
-    color:rgb(21, 65, 21);
+li  a:visited {
+    color: rgb(21, 65, 21);
 }
 
+li a:hover {
+    color: white;
+    background-color: red;
+}
+
+li a:active {
+    color: orange;
+}
