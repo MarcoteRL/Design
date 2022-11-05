@@ -1,41 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
 
 header {
     height: 90px;
     background: #546FE7;
-}
+}   
 
-.inner-width {
-    max-width: 1000px;
+.navbar {
+    max-width: 100%;
     padding: 0 10px;
     margin: auto;
 }
 
 .logo {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 3%;
     float: left;
     padding: 27px 0;
     color: #fff;
+    font-weight: 400;
+    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.3);
 }
 
-.logo img {
-    height: 50px;
+#FP{
+    color:#273b91;
+    font-weight: 900;
 }
 
-.navigation-menu {
+.menu {
+    font-family: 'Poppins', sans-serif;
+    margin-right: 3%;
     float: right;
     display: flex;
     align-items: center;
     min-height: 90px;
 }
 
-.navigation-menu a {
+.menu a {
+    text-decoration: none;
     margin-left: 10px;
-    color: #ddd;
+    color: white;
     text-transform: uppercase;
     font-size: 14px;
     padding: 12px 20px;
@@ -43,79 +51,35 @@ header {
     transition: .3s linear;
 }
 
-.navigation-menu a:hover {
+.menu a:hover {
     background: #273b91;
     color: #fff;
     transform: scale(1.1);
 }
 
-.navigation-menu i {
-    margin-right: 8px;
-    font-size: 16px;
+#activo{
+    color:white;
+    transform: scale(120%)
 }
 
-.home {
-    color: #fff;
-}
-
-a.aj_btn {
+a.login {
     background: #273b91;
     color: #fff;
     font-weight: 500;
     letter-spacing: 2px;
 }
 
-a.aj_btn:hover {
+a.login:hover {
     background: #fff;
     color: #273b91;
     font-weight: 500;
     letter-spacing: 2px;
 }
 
-.menu-toggle-btn {
-    float: right;
-    height: 90px;
-    line-height: 90px !important;
-    color: #fff;
-    font-size: 26px;
-    display: none !important;
-    cursor: pointer;
-}
-
-
 @media screen and (max-width:900px) {
-    .menu-toggle-btn {
-        display: block !important;
-    }
-
-    .navigation-menu {
-        position: fixed;
-        width: 100%;
+    .menu {
         max-width: 400px;
-        background: #172b4d;
-        top: 90px;
-        right: 0;
         display: none;
-        padding: 20px 40px;
-        box-sizing: border-box;
     }
 
-    .navigation-menu::before {
-        content: "";
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #172b4d;
-        position: absolute;
-        top: -10px;
-        right: 10px;
-    }
-
-    .navigation-menu a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .navigation-menu.active {
-        display: block;
-    }
 }
