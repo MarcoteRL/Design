@@ -88,11 +88,11 @@ main {
 #profesor {
     margin-right: 2%;
     float: left;
-    width: 22%
+    width: 30%
 }
 
 #paleta{
-    margin-top:4%;
+    margin-top:16%;
     float:right;
     width:18%
 }
@@ -110,7 +110,7 @@ main {
     font-weight: bold;
 }
 
-.columna_izquierda {
+.columna_derecha {
     width: 20%;
     height: 100%;
     float: right;
@@ -118,13 +118,13 @@ main {
     margin-left: 3%;
 }
 
-.columna_izquierda * dt {
+.columna_derecha * dt {
     margin-left: 20px;
     font: 0.9em sans-serif, Arial, Helvetica;
     font-weight: bold;
 }
 
-.columna_izquierda * dd {
+.columna_derecha * dd {
     margin-left: 20px;
     padding-bottom: 15px;
 }
@@ -136,7 +136,7 @@ main {
     color: #273b91
 }
 
-.columna_izquierda a {
+.columna_derecha a {
     text-decoration: none;
     color: #3886e6;
     font-weight: 400;
@@ -151,7 +151,7 @@ main {
 }
 
 .parte2{
-    margin-top: 5%;;
+    margin-top: 10%;;
 }
 
 @media screen and (max-width:900px) {
