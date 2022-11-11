@@ -74,12 +74,6 @@ body {
     color: #fff;
     transform: scale(1.1);
 }
-
-#activo {
-    color: white;
-    transform: scale(120%)
-}
-
 a.login {
     background: #273b91;
     color: #fff;
