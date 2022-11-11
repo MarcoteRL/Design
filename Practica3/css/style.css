@@ -21,9 +21,11 @@ header {
     margin-bottom: 3%;
 }
 
-body{
+body {
     min-height: 100vh;
 }
+
+
 
 .navbar {
     max-width: 100%;
@@ -56,6 +58,7 @@ body{
 }
 
 .menu a {
+    font-weight: 400;
     text-decoration: none;
     margin-left: 10px;
     color: white;
@@ -114,6 +117,10 @@ main {
 .contenido p {
     font-size: 18px;
     margin-right: 3%;
+}
+
+.contenido a {
+    font-weight: 500;
 }
 
 .contenido ol .contenido a {
@@ -234,8 +241,8 @@ footer {
 
 .copyright span {
     text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
+    color: #273b91;
+    font-weight: 800;
 }
 
 .texto2 {
