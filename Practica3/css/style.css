@@ -1,17 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
     height: 90px;
     background: #546FE7;
     margin-bottom: 3%;
+}
+
+body{
+    min-height: 100vh;
 }
 
 .navbar {
@@ -83,6 +94,7 @@ a.login:hover {
 main {
     margin-left: 3%;
     margin-right: 3%;
+
 }
 
 #profesor {
@@ -91,10 +103,12 @@ main {
     width: 30%
 }
 
-#paleta{
-    margin-top:16%;
-    float:right;
-    width:18%
+
+#paleta {
+    margin-top: 130px;
+    margin-right: 15%;
+    float: right;
+    width: 30%;
 }
 
 .contenido p {
@@ -102,9 +116,7 @@ main {
     margin-right: 3%;
 }
 
-.contenido ol
-
-.contenido a {
+.contenido ol .contenido a {
     text-decoration: none;
     color: #3886e6;
     font-weight: bold;
@@ -112,7 +124,7 @@ main {
 
 .columna_derecha {
     width: 20%;
-    height: 100%;
+    height: auto;
     float: right;
     position: relative;
     margin-left: 3%;
@@ -150,14 +162,154 @@ main {
     font-weight: 700;
 }
 
-.parte2{
-    margin-top: 10%;;
+.parte2 {
+    margin-top: 10%;
+}
+
+.parte2 ol {
+    margin-top: 15px;
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+}
+
+.parte2 ol li {
+    margin-left: 3%;
+    position: relative;
+    padding-left: 50px;
+    min-height: 50px;
+}
+
+.parte2 ol li:before {
+    content: counter(li);
+    counter-increment: li;
+    color: #fff;
+    background: #3886e6;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer {
+    color: #fff;
+    background-color: rgb(51, 48, 48);
+    margin-top: 2%;
+    width: 100%;
+    padding-top: 40px;
+    min-height: 100%;
+    bottom: 0;
+    margin-bottom: 0px;
+}
+
+.contenido_footer {
+    height: 40px;
+    background-color: rgb(51, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.copyright {
+    background-color: rgb(29, 28, 28);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.copyright p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.copyright span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.texto2 {
+    margin-top: 15px;
+    color: #273b91
+}
+
+.redes ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.redes li {
+    margin: 0 20px;
+}
+
+.redes i {
+    width: 60px;
+}
+
+
+.redes a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.redes a:hover {
+    color: #273b91;
+    font-size: 110%;
 }
 
 @media screen and (max-width:900px) {
     .menu {
         max-width: 400px;
         display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .contenido p {
+        font-size: 150%;
+    }
+
+    #titulo_columna {
+        font-size: 25px;
+    }
+
+    .titulo {
+        font-size: 40px
+    }
+
+    .columna_derecha {
+        font-size: 120%;
+    }
+
+    .menu a {
+        font-size: 120%;
+    }
+
+    .logo {
+        padding-top: 6px;
+        margin-top: 0;
+        font-size: 50px;
+    }
+
+    .parte2 ol li {
+        font-size: 130%;
+    }
+
+    .texto2 {
+        font-size: 120%;
     }
 
 }
