@@ -16,7 +16,7 @@
 }
 
 header {
-    height: 90px;
+    height: 80px;
     background: #546FE7;
     margin-bottom: 3%;
 }
@@ -24,8 +24,6 @@ header {
 body {
     min-height: 100vh;
 }
-
-
 
 .navbar {
     max-width: 100%;
@@ -38,14 +36,18 @@ body {
     margin-left: 3%;
     float: left;
     padding: 27px 0;
-    color: #fff;
+    color: #273b91;
     font-weight: 400;
     text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    min-height: 80px;
 }
 
 #FP {
-    color: #273b91;
+    color: yellow;
     font-weight: 900;
+
 }
 
 .menu {
@@ -54,7 +56,7 @@ body {
     float: right;
     display: flex;
     align-items: center;
-    min-height: 90px;
+    min-height: 80px;
 }
 
 .menu a {
@@ -74,6 +76,7 @@ body {
     color: #fff;
     transform: scale(1.1);
 }
+
 a.login {
     background: #273b91;
     color: #fff;
@@ -102,7 +105,7 @@ main {
 
 
 #paleta {
-    margin-top: 130px;
+    margin-top: 150px;
     margin-right: 15%;
     float: right;
     width: 30%;
@@ -164,7 +167,7 @@ main {
 }
 
 .parte2 {
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .parte2 ol {
@@ -266,9 +269,13 @@ footer {
     color: #fff;
 }
 
+.redes li:hover {
+    transform: scale(1.1);
+}
+
 .redes a:hover {
     color: #273b91;
-    font-size: 110%;
+
 }
 
 @media screen and (max-width:900px) {
@@ -278,39 +285,52 @@ footer {
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
+
+    main {
+        margin-left: 5%;
+    }
+
     .contenido p {
-        font-size: 150%;
+        font-size: 120%;
     }
 
     #titulo_columna {
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    #profesor {
+        width: 400px;
+    }
+
+    #paleta {
+        width: 400px;
     }
 
     .titulo {
-        font-size: 40px
+        font-size: 30px
     }
 
     .columna_derecha {
-        font-size: 120%;
+        font-size: 110%;
     }
 
     .menu a {
-        font-size: 120%;
+        font-size: 90%;
     }
 
     .logo {
-        padding-top: 6px;
+        padding-top: 12px;
         margin-top: 0;
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .parte2 ol li {
-        font-size: 130%;
+        font-size: 110%;
     }
 
     .texto2 {
-        font-size: 120%;
+        font-size: 110%;
     }
 
 }
