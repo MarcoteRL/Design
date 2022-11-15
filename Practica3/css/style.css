@@ -35,7 +35,7 @@ body {
     font-family: 'Nunito', sans-serif;
     margin-left: 3%;
     float: left;
-    padding: 27px 0;
+    padding: 16px 0;
     color: #273b91;
     font-weight: 400;
     text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.3);
@@ -167,7 +167,7 @@ main {
 }
 
 .parte2 {
-    margin-top: 8%;
+    margin-top: 9%;
 }
 
 .parte2 ol {
@@ -182,6 +182,7 @@ main {
     position: relative;
     padding-left: 50px;
     min-height: 50px;
+    padding-top: 0.5%;
 }
 
 .parte2 ol li:before {
@@ -277,6 +278,112 @@ footer {
     color: #273b91;
 
 }
+
+/* Página de información */
+
+.contenido2 {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.contenido2 img {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+.tituloBarra {
+    line-height: 1.5rem;
+    border-left: 12px solid #273b91;
+    padding: 1rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.contenido2 p {
+    font-size: 18px;
+}
+
+.contenido2 ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+}
+
+.contenido2 ul li {
+    margin-left: 3%;
+    position: relative;
+    padding-top: 0.5%;
+    padding-left: 50px;
+    min-height: 50px;
+}
+
+.contenido2 ul li:before {
+    content: counter(li);
+    counter-increment: li;
+    color: #fff;
+    background: #273b91;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tituloBarra2 {
+    line-height: 1rem;
+    border-left: 12px solid #273b91;
+    padding: 1rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.botonTop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #273b91;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.botonTop img {
+    width: 30px;
+    height: auto;
+}
+
+.botonTop:hover {
+    transform: scale(1.2);
+}
+
+.contenido2 h4 {
+    font-weight: 500;
+    background-color: rgb(162, 189, 214);
+    border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+
 
 @media screen and (max-width:900px) {
     .menu {
