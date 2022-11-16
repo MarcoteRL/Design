@@ -2,17 +2,18 @@
     padding: auto;
     display: table;
     margin: 0 auto;
-    margin-left:5vw;
+    margin-left: 5vw;
 }
 
 .carta {
     display: table-cell;
-    background-color: rgb(201, 226, 247);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
     float: left;
     margin: 40px;
     width: 300px;
     height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.342);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
 }
@@ -20,7 +21,7 @@
 
 .carta:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: translateY(-20px) scale(1.05) ;
+    transform: translateY(-20px) scale(1.05);
 }
 
 .carta img {
@@ -37,13 +38,13 @@
 }
 
 @media (max-width: 1600px) {
-    .carta{
+    .carta {
         margin: 20px;
-        width: 200px;
-        height: 270px;
+        width: 230px;
+        height: 320px;
     }
 
-    .carta img{
+    .carta img {
         width: 70%;
     }
 

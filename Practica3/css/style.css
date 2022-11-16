@@ -75,8 +75,8 @@ body {
     transition: .3s linear;
 }
 
-#activo{
-    color:rgb(235, 235, 44);
+#activo {
+    color: rgb(235, 235, 44);
     filter: brightness(1.75);
     font-weight: 700;
 }
@@ -415,6 +415,31 @@ footer {
 
 /* -------------------------------------------------------------------------- */
 
+.contenido3 {
+    margin-top: 4%;
+    margin-left: 6%;
+    margin-right: 12%;
+    margin-bottom: 4%
+}
+
+.contenido3 a {
+    text-decoration: none;
+    color: #273b91;
+    font-weight: bold;
+}
+
+.tituloAyuda {
+    font-size: larger;
+    color: rgb(34, 34, 34);
+    border-bottom: 2px solid #273b91;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+
+.tituloAyuda::before {
+    content: "💬"
+}
 
 
 
