@@ -21,6 +21,10 @@ header {
     margin-bottom: 3%;
 }
 
+main {
+    min-height: 70vh;
+}
+
 body {
     min-height: 100vh;
 }
@@ -71,9 +75,14 @@ body {
     transition: .3s linear;
 }
 
+#activo{
+    color:rgb(235, 235, 44);
+    filter: brightness(1.75);
+    font-weight: 700;
+}
+
 .menu a:hover {
     background: #273b91;
-    color: #fff;
     transform: scale(1.1);
 }
 
@@ -106,7 +115,6 @@ main {
 
 #paleta {
     margin-top: 150px;
-    margin-right: 15%;
     float: right;
     width: 30%;
 }
@@ -136,7 +144,7 @@ main {
 
 .columna_derecha * dt {
     margin-left: 20px;
-    font: 0.9em sans-serif, Arial, Helvetica;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
@@ -202,6 +210,13 @@ main {
     left: 0;
 }
 
+.texto2 {
+    margin-top: 15px;
+    color: #273b91
+}
+
+/* --------------------CSS para estilizar el footer--------------------------------*/
+
 footer {
     color: #fff;
     background-color: rgb(51, 48, 48);
@@ -243,11 +258,7 @@ footer {
     font-weight: 800;
 }
 
-.texto2 {
-    margin-top: 15px;
-    color: #273b91
-}
-
+/* Apartado de enlaces a redes sociales en el footer */
 .redes ul {
     list-style: none;
     display: flex;
@@ -279,7 +290,9 @@ footer {
 
 }
 
-/* Página de información */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------Página de información  y cursos*------------------------------ */
 
 .contenido2 {
     margin-left: 5%;
@@ -296,6 +309,7 @@ footer {
 
 
 .tituloBarra {
+    /* Barra lateral azul al lado de los titulos*/
     line-height: 1.5rem;
     border-left: 12px solid #273b91;
     padding: 1rem 1rem;
@@ -351,6 +365,30 @@ footer {
     font-weight: 700;
 }
 
+.contenido2 h4 {
+    font-weight: 500;
+    background-color: rgb(162, 189, 214);
+    border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.contenido2 a {
+    text-decoration: none;
+    color: rgb(32, 31, 31)
+}
+
+.contenido2 a:hover {
+    color: #273b91;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Botón para que al pulsarlo suba a la parte de arriba de la página */
+
 .botonTop {
     position: fixed;
     bottom: 20px;
@@ -375,15 +413,12 @@ footer {
     transform: scale(1.2);
 }
 
-.contenido2 h4 {
-    font-weight: 500;
-    background-color: rgb(162, 189, 214);
-    border: 2px solid black;
-    padding: 8px;
-    margin-bottom: 15px;
-}
+/* -------------------------------------------------------------------------- */
 
 
+
+
+/* CSS para hacerlo algo responsive, para que se visualice en el formato de la pantalla de clase y en una pantalla 1920x1080 */
 
 @media screen and (max-width:900px) {
     .menu {
@@ -441,3 +476,5 @@ footer {
     }
 
 }
+
+/* -------------------------------------------------------------------------- */
