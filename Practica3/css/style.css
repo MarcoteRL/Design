@@ -41,8 +41,8 @@ body {
     float: left;
     padding: 16px 0;
     color: #273b91;
-    font-weight: 400;
-    text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.3);  
     display: flex;
     align-items: center;
     min-height: 80px;
