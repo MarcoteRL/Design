@@ -77,7 +77,6 @@ body {
 
 #activo {
     color: rgb(235, 235, 44);
-    filter: brightness(1.75);
     font-weight: 700;
 }
 
