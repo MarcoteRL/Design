@@ -8,6 +8,26 @@
     display: none;
 }
 
+@font-face {
+    font-family: "F1FontBlack";
+    src: url(font/Formula1-Black.ttf);
+}
+
+@font-face {
+    font-family: "F1Font";
+    src: url(font/Formula1-Regular.ttf);
+}
+
+@font-face {
+    font-family: "F1FontBold";
+    src: url(font/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: "F1FontWide";
+    src: url(font/Formula1-Wide.ttf);
+}
+
 header {
     position: relative;
     background-color: black;
@@ -53,17 +73,20 @@ header .overlay {
     opacity: 70%;
 }
 
+main{
+    min-height: 70vh;
+}
 
 
 .carousel-item img {
     width: 100%;
 }
 
-
-
 h5 {
+    font-family: "F1FontBold";
     color: black;
     font-size: 40px !important;
+<<<<<<< HEAD
     font-weight: bold !important;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
@@ -71,3 +94,31 @@ h5 {
 h1{
     font-family: "Formula1 Display Wide"
 }
+=======
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.F1_title {
+    border-radius: 15px;
+    z-index: 2;
+    font-family: "F1FontBold";
+    color: #fff;
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.background_teams {
+    background-image: url(img/circuito.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+>>>>>>> 80988e78321b07abc1f8496ee2b90caf1a8eb79f
