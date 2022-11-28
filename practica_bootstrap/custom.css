@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Formula1 Display Wide";
+    src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot");
+    src: url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.woff") format("woff"), url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide") format("svg");
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -59,5 +65,9 @@ h5 {
     color: black;
     font-size: 40px !important;
     font-weight: bold !important;
-    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+h1{
+    font-family: "Formula1 Display Wide"
 }
