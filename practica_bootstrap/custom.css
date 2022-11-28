@@ -86,16 +86,12 @@ h5 {
     font-family: "F1FontBold";
     color: black;
     font-size: 40px !important;
-<<<<<<< HEAD
     font-weight: bold !important;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 h1{
-    font-family: "Formula1 Display Wide"
-}
-=======
-    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
+    font-family: "Formula1 Display Wide";
 }
 
 .F1_title {
@@ -121,4 +117,3 @@ h1{
     background-size:cover;
     background-repeat:no-repeat;
 }
->>>>>>> 80988e78321b07abc1f8496ee2b90caf1a8eb79f
