@@ -73,9 +73,9 @@ header .overlay {
     opacity: 70%;
 }
 
-main{
+/* main{
     min-height: 70vh;
-}
+} */
 
 
 .carousel-item img {
@@ -99,17 +99,6 @@ h1{
     z-index: 2;
     font-family: "F1FontBold";
     color: #fff;
-}
-
-.overlay2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 110vh;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 .background_teams {
