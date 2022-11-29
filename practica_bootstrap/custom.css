@@ -73,16 +73,16 @@ header .overlay {
     opacity: 70%;
 }
 
-main{
+main {
     min-height: 70vh;
 }
 
 
 .carousel-item img {
-    width: 100%;
+    min-width: 100%;
 }
 
-h5 {
+.carousel-item h5 {
     font-family: "F1FontBold";
     color: black;
     font-size: 40px !important;
@@ -90,7 +90,7 @@ h5 {
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
-h1{
+h1 {
     font-family: "Formula1 Display Wide";
 }
 
@@ -103,6 +103,10 @@ h1{
 
 .background_teams {
     background-image: url(img/circuito.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    font-family: "F1Font";
 }
