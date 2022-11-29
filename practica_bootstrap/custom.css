@@ -78,9 +78,9 @@ main {
 }
 
 
-.carousel-item img {
+/* .carousel-item img {
     min-width: 100%;
-}
+} */
 
 .carousel-item h5 {
     font-family: "F1FontBold";
@@ -107,6 +107,19 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.navbar {
+.navbar a {
     font-family: "F1Font";
+    color: #fff !important;
+}
+
+.dropdown-menu a{
+    color:black !important
+}
+
+#active{
+    color: black !important;
+}
+
+.navbar a:hover{
+    transform: scale(1.1);
 }
