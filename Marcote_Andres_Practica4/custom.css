@@ -57,6 +57,8 @@ header .container {
     z-index: 2;
 }
 
+
+
 header .overlay {
     position: absolute;
     top: 0;
@@ -73,10 +75,14 @@ header .overlay {
     opacity: 70%;
 }
 
-main {
+
+main{
     min-height: 70vh;
 }
 
+.main_page{
+    background-image: url(img/texturaVieja.jpg);
+}
 
 .carousel-item h5 {
     font-family: "F1FontBold";
@@ -149,7 +155,7 @@ h2 {
     color: red;
 }
 
-h3{
+h3 {
     font-family: "F1FontBold";
 }
 
