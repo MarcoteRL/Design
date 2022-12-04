@@ -99,10 +99,18 @@ main{
     color: #fff;
 }
 
+.card:hover{
+    transform: scale(1.05 );
+}
+
 .background_teams {
     background-image: url(img/circuito.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.pilotos_body{
+    background-image: url(img/mercedesPattern.png);
 }
 
 .navbar a {
