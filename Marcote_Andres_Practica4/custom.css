@@ -57,6 +57,8 @@ header .container {
     z-index: 2;
 }
 
+
+
 header .overlay {
     position: absolute;
     top: 0;
@@ -73,10 +75,14 @@ header .overlay {
     opacity: 70%;
 }
 
-main {
+
+main{
     min-height: 70vh;
 }
 
+.main_page{
+    background-image: url(img/texturaVieja.jpg);
+}
 
 .carousel-item h5 {
     font-family: "F1FontBold";
@@ -93,10 +99,18 @@ main {
     color: #fff;
 }
 
+.card:hover{
+    transform: scale(1.05 );
+}
+
 .background_teams {
     background-image: url(img/circuito.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.pilotos_body{
+    background-image: url(img/mercedesPattern.png);
 }
 
 .navbar a {
@@ -149,7 +163,7 @@ h2 {
     color: red;
 }
 
-h3{
+h3 {
     font-family: "F1FontBold";
 }
 
