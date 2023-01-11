@@ -8,13 +8,15 @@
     </head>
     <body>
 
+        <h1>Ejercicio 3</h1>
+
         <!-- Ejercicio 1. Imágenes -->
         <picture>
             <source srcset="img/img1000.jpg" media="(min-width: 800px &&
                 max-width: 1200px)">
             <source srcset="img/img1300.jpg" media="(min-width: 1200px)">
             <source srcset="img/img700.jpg" media="(max-width: 800px)">
-            <img src="img/hola.jfif" alt="MDN" style="max-height:90vh">
+            <img src="img/hola.jfif" alt="MDN" style="max-height:60vh">
         </picture>
 
         <!-- Ejercicio 2. Audio -->
@@ -36,9 +38,10 @@
 
         <style>
             body{
-                background-color: rgb(37, 35, 35);
+                background-color: #192126;
             }
             .cuadrado{
+                margin-top: 5%;
                 width:100px;
                 height: 100px;
                 position: relative;
@@ -48,6 +51,7 @@
     0 0 60px 30px #fff,
     0 0 100px 60px rgb(119, 0, 255),
     0 0 140px 90px #0ff;
+    
             }
 
             @keyframes animacion{
@@ -65,6 +69,18 @@
                     background-color: red;
                     left:0
                 }
+            }
+
+            h1 { color: rgb(216, 150, 28); 
+                font-family: 'Helvetica Neue', sans-serif; 
+                font-size: 60px; font-weight: bold; 
+                letter-spacing: -1px; 
+                line-height: 1; 
+                text-align: center; 
+            }
+
+            ::-webkit-scrollbar {
+                display: none;
             }
         </style>
     </body>
