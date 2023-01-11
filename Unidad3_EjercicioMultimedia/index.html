@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 3</title>
+    </head>
+    <body>
+
+        <!-- Ejercicio 1. Imágenes -->
+        <picture>
+            <source srcset="img/img1000.jpg" media="(min-width: 800px &&
+                max-width: 1200px)">
+            <source srcset="img/img1300.jpg" media="(min-width: 1200px)">
+            <source srcset="img/img700.jpg" media="(max-width: 800px)">
+            <img src="img/hola.jfif" alt="MDN" style="max-height:90vh">
+        </picture>
+
+        <!-- Ejercicio 2. Audio -->
+        <audio controls>
+            <source src="audio/elevatorMusic.mp3">
+            <source src="audio/elevatorMusic.ogg">
+            Tu navegador no acepta el formato de audio
+        </audio>
+
+        <!-- Ejercicio 3. Vídeo -->
+        <video controls style="width:300px">
+            <source src="video/ZoolanderMEME.mp4" type="video/mp4">
+            <source src="video/ZoolanderMEME.webm" type="video/webm">
+            Tu navegador no acepta el formato de vídeo
+        </video>
+
+        <!-- Ejercicio 4. Animación -->
+        <div class="cuadrado"></div>
+
+        <style>
+            body{
+                background-color: rgb(37, 35, 35);
+            }
+            .cuadrado{
+                width:100px;
+                height: 100px;
+                position: relative;
+                animation: animacion 5s infinite;
+                animation-timing-function: linear;
+                box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px rgb(119, 0, 255),
+    0 0 140px 90px #0ff;
+            }
+
+            @keyframes animacion{
+                0% {
+                    background-color: red;
+                    left:0px
+                }
+
+                50%{
+                    background-color: blue;
+                    left:90vw
+                }
+
+                100%{
+                    background-color: red;
+                    left:0
+                }
+            }
+        </style>
+    </body>
+</html>
