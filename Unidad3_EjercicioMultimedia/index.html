@@ -5,6 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 3</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+            rel="stylesheet">
     </head>
     <body>
 
@@ -12,35 +17,36 @@
 
         <!-- Ejercicio 1. Imágenes -->
         <picture>
-            <source srcset="img/img1000.jpg" media="(min-width: 800px &&
-                max-width: 1200px)">
             <source srcset="img/img1300.jpg" media="(min-width: 1200px)">
-            <source srcset="img/img700.jpg" media="(max-width: 800px)">
-            <img src="img/hola.jfif" alt="MDN" style="max-height:60vh">
+            <source srcset="img/principal.jfif" media="(max-width: 800px)">
+            <img src="img/img700.jpg" class="rounded mx-auto d-block" alt="MDN"
+                style="max-height:90vh">
         </picture>
+        <div class="mx-auto">
 
-        <!-- Ejercicio 2. Audio -->
-        <audio controls>
-            <source src="audio/elevatorMusic.mp3">
-            <source src="audio/elevatorMusic.ogg">
-            Tu navegador no acepta el formato de audio
-        </audio>
+            <!-- Ejercicio 2. Audio -->
+            <audio controls class="mx-auto my-3 d-block">
+                <source src="audio/elevatorMusic.mp3">
+                <source src="audio/elevatorMusic.ogg">
+                Tu navegador no acepta el formato de audio
+            </audio>
 
-        <!-- Ejercicio 3. Vídeo -->
-        <video controls style="width:300px">
-            <source src="video/ZoolanderMEME.mp4" type="video/mp4">
-            <source src="video/ZoolanderMEME.webm" type="video/webm">
-            Tu navegador no acepta el formato de vídeo
-        </video>
+            <!-- Ejercicio 3. Vídeo -->
+            <video controls style="max-width:300px" class="mx-auto my-3 d-block">
+                <source src="video/ZoolanderMEME.mp4" type="video/mp4">
+                <source src="video/ZoolanderMEME.webm" type="video/webm">
+                Tu navegador no acepta el formato de vídeo
+            </video>
+        </div>
+
 
         <!-- Ejercicio 4. Animación -->
-        <div class="cuadrado"></div>
+        <div class="cuadrado my-5"></div>
         <style>
             body{
                 background-color: #192126;
             }
             .cuadrado{
-                margin-top: 5%;
                 width:100px;
                 height: 100px;
                 position: relative;
