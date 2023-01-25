@@ -113,26 +113,6 @@ header {
     animation: spin 1s infinite linear;
 }
 
-@keyframes spin {
-    25% {
-        transform: translateX(-25px) translateY(-35px);
-        width: 15px;
-        height: 15px;
-    }
-
-    50% {
-        transform: translateX(-55px) translateY(-30px);
-        width: 5px;
-        height: 5px;
-    }
-
-    75% {
-        transform: translateX(-85px) translateY(-35px);
-        width: 15px;
-        height: 15px;
-    }
-}
-
 .boton button:focus {
     outline: none;
 }
@@ -164,6 +144,10 @@ header {
 #btnScrollToTop a {
     text-decoration: none;
     color: black;
+}
+
+#btnScrollToTop:hover{
+    transform: scale(1.2);
 }
 
 #Music h1 {
@@ -229,7 +213,6 @@ header {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-
 }
 
 
