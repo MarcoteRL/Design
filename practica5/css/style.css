@@ -20,7 +20,6 @@
     font-size: larger;
     font-weight: 600;
     text-transform: uppercase;
-
 }
 
 .navbar li a {
@@ -36,7 +35,7 @@
 
 .navbar li a:hover {
     color: yellow !important;
-    font-weight: bold;
+    scale: 1.1;
 }
 
 
@@ -146,7 +145,7 @@ header {
     color: black;
 }
 
-#btnScrollToTop:hover{
+#btnScrollToTop:hover {
     transform: scale(1.2);
 }
 
