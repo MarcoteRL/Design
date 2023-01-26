@@ -60,7 +60,7 @@ header {
 
 .spotify {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
 }
 
 
@@ -161,7 +161,7 @@ header {
 #Music {
     scroll-snap-type: y mandatory;
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgb(26, 25, 25);
 }
 
