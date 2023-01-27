@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
 }
 
 body {
@@ -118,9 +121,10 @@ header {
 /* ---------------------- */
 
 /* Contenedores de musica */
-#music{
+#music {
     padding-bottom: 5%;
 }
+
 .music-container {
     display: flex;
     align-items: center;
@@ -246,10 +250,7 @@ header {
 
 .active {
     animation: fadeInTop 1s forwards;
-}
-
-.activeTable {
-    animation: fadeInRight 1.5s forwards;
+    animation-iteration-count: 1;
 }
 
 /* -------------------------------- */
@@ -307,5 +308,17 @@ header {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Cambio de color a los contenedores de audio para que sean iguales que los del reproductor de firefox */
+@-moz-document url-prefix() {
+    .music-container .box {
+        background-color: #474747;
+        color: white;
+    }
+
+    .music-container .box .audio audio {
+        background: white;
     }
 }
