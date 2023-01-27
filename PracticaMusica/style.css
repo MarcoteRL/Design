@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-image: url('img/fondoDjNano.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100%;
+    height: 100%;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilización de la navbar */
+
+.navbar {
+    background-color: transparent !important;
+    font-family: 'Poppins';
+    font-size: larger;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar li a {
+    color: white !important;
+    margin-left: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:hover {
+    scale: 1.3
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar li a:hover {
+    color: yellow !important;
+}
+
+.navbar img {
+    width: 90px;
+}
+
+.navbar img:hover {
+    animation: linear infinite 2.5s spin;
+}
+
+/* ---------------------- */
+
+
+/* Botón para poder subir a la parte de arriba */
+#btnScrollToTop {
+    z-index: 100;
+    position: fixed;
+    border-radius: 50%;
+    width: 80px;
+    right: 40px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: #fbff21;
+    border: 2px solid black;
+}
+
+#btnScrollToTop a {
+    text-decoration: none;
+    color: black;
+}
+
+#btnScrollToTop:hover {
+    transform: scale(1.2);
+}
+
+/* -------------------------------------------- */
+
+#music, #tour, #releases {
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgb(26, 25, 25);
+}
+
+/* Estilo de las letras para los titulos de las secciones */
+.title h1 {
+    background-image: url(https://media0.giphy.com/media/xTk9ZzlvUqB4mnDAyY/giphy.gif?cid=ecf05e47tsbdgkf0z645uk43oxe2ln03zbezvi8rkmewy9pe&rid=giphy.gif&ct=g);
+    background-size: cover;
+    color: transparent;
+    background-clip: border-box;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: calc(2rem + 2vw);
+    padding-top: 2%;
+    font-weight: 700;
+}
+
+/* ---------------------- */
+
+/* Contenedores de musica */
+#music{
+    padding-bottom: 5%;
+}
+.music-container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.music-container .box {
+    height: 14.5rem;
+    width: 80%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+.music-container .box .image {
+    height: 100%;
+    width: auto;
+}
+
+.music-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.music-container .box .audio {
+    width: 75%;
+}
+
+.music-container .box .audio audio {
+    width: 100%;
+    outline: none
+}
+
+.music-container .box .audio audio::-webkit-media-controls-enclosure {
+    background: none !important;
+}
+
+
+/* -------------------------------- */
+
+/* Tabla de la sección Tour */
+.table {
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.table thead {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.table tbody tr {
+    cursor: pointer;
+}
+
+.table tbody tr:hover {
+    background-color: #fbff216e !important;
+    color: black !important;
+}
+
+.table td {
+    border-top: #00000000 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.table th {
+    background-color: rgba(0, 0, 0, 0.712);
+    border-top: #00000000 !important;
+    border-bottom: #00000000 !important;
+}
+
+.vertical-center {
+    min-height: 72%;
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------------- */
+
+/* Contenedor que sirve para ajustar y poner el video de fondo en la seccón de Tour */
+
+.video-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.video-container video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#tour {
+    background-color: rgba(0, 0, 0, 0.767);
+    /* Funciona de overlay, para oscurecer el vídeo */
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.active {
+    animation: fadeInTop 1s forwards;
+}
+
+.activeTable {
+    animation: fadeInRight 1.5s forwards;
+}
+
+/* -------------------------------- */
+
+/* Audio resposive en formato pc y móvil */
+@media (max-width:600px) {
+
+    .music-container .box {
+        height: 27rem;
+        width: 90%;
+        flex-flow: column;
+        font-size: smaller;
+    }
+
+    .music-container .box .image {
+        height: 80%;
+        width: 100%;
+    }
+
+    .music-container .box .audio {
+        height: 20%;
+        width: 100%;
+    }
+
+    .music-container .box .audio audio {
+        padding-top: 0px;
+        padding-bottom: 5%;
+    }
+
+    .music-container .box .audio h2 {
+        padding-top: 2%;
+        font-size: 25px !important;
+    }
+
+    .music-container .box .image img {
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 1rem;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: -360deg;
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
