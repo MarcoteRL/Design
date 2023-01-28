@@ -196,7 +196,7 @@ header {
 }
 
 .table td {
-    border-top: #00000000 !important;
+    border-top: 2px solid #000000af !important;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -221,19 +221,15 @@ header {
 .video-container {
     height: 100vh;
     width: 100vw;
-    position: relative;
 }
 
 .video-container video {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: absolute;
     z-index: -1;
+    translate: -50%;
 }
 
 #tour {
@@ -250,10 +246,21 @@ header {
 
 .active {
     animation: fadeInTop 1s forwards;
-    animation-iteration-count: 1;
 }
 
+
 /* -------------------------------- */
+
+.btn {
+    border-radius: 10px !important;
+    border: none !important
+}
+
+a:focus, a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 /* Audio resposive en formato pc y móvil */
 @media (max-width:600px) {
