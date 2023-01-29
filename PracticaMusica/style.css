@@ -12,7 +12,7 @@
 }
 
 body {
-    max-width: 100vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -257,14 +257,13 @@ header {
 
 .btn {
     border-radius: 10px !important;
-    border: none !important
+    border: none !important;
 }
 
 a:focus, a:active {
     outline: none !important;
     box-shadow: none !important;
 }
-
 
 /* Audio resposive en formato pc y móvil */
 @media (max-width:600px) {
@@ -302,12 +301,15 @@ a:focus, a:active {
     }
 }
 
+/* Animación del logo situado en la navbar. La animación hace que el logo de vueltas cuando el ratón se posa encima. */
+
 @keyframes spin {
     0% {
         rotate: -360deg;
     }
 }
 
+/* Animación de los contenedores de música. Al cargar la página por primera vez van apareciendo uno a uno cada contenedor al hacer scroll. */
 @keyframes fadeInTop {
     from {
         position: relative;
