@@ -1,0 +1,56 @@
+body {
+    min-height: 120vh;
+    margin: 1% !important;
+}
+
+
+.boxes {
+    display: flex;
+}
+
+#box1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+#box2 {
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+#box3 {
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(148, 33, 255);
+    border: 2px solid black;
+}
+
+#box1, #box2, #box3 {
+    cursor: pointer;
+}
+
+#scrollToTop {
+    display: none;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: auto;
+    text-decoration: none;
+    color: black;
+    border: 3px solid black;
+}

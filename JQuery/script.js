@@ -2,28 +2,28 @@
 
 $("#cambiarLetra,#cambiarFuente, #cambiarColor, img").css("cursor", "pointer")
 
-// Ejercicio 1
+// ---------------------------------------------Ejercicio 1-------------------------------------
 
 /**
  * Crea una página con una serie de botones, que, dependiendo de cual se pulse,
  *cambie el color del título, la fuente del párrafo o el tamaño de la letra.
  */
 
-// $("#cambiarLetra").click(() => {
-//     $("#p1").css("font-size", "small");
-// })
+$("#cambiarLetra").click(() => {
+    $("#p1").css("font-size", "small");
+})
 
-// $("#cambiarFuente").click(() => {
-//     $("#p1").css("font-family", "arial");
-// })
+$("#cambiarFuente").click(() => {
+    $("#p1").css("font-family", "arial");
+})
 
-// $("#cambiarColor").click(() => {
-//     $("#ej1").css("color", "blue");
-// })
+$("#cambiarColor").click(() => {
+    $("#ej1").css("color", "blue");
+})
 
 /**------------------------------------------ */
 
-//Ejercicio 2
+//Ej 2
 
 /**
  * Crea una página con un selector de idioma para una noticia. Dependiendo del
@@ -31,31 +31,31 @@ $("#cambiarLetra,#cambiarFuente, #cambiarColor, img").css("cursor", "pointer")
  * de la noticia.
  */
 
-// $("#france").click(() => {
-//     $("#ej2").text("Exercer 2");
-//     $("#p2").text(`Créez une page avec un sélecteur de langue pour une actualité. 
-//         En fonction de la langue que vous sélectionnez, 
-//         faites-lui changer la langue du titre et du corps de lactualité.`)
-// })
+$("#france").click(() => {
+    $("#ej2").text("Exercer 2");
+    $("#p2").text(`Créez une page avec un sélecteur de langue pour une actualité. 
+        En fonction de la langue que vous sélectionnez, 
+        faites-lui changer la langue du titre et du corps de lactualité.`)
+})
 
 
-// $("#spain").click(() => {
-//     $("#ej2").text("Ejercicio 2");
-//     $("#p2").text(`Crea una página con un selector de idioma para una noticia.
-//     Dependiendo del idioma que selecciones, haz que cambie el idioma tanto del titular
-//     como del cuerpo de la noticia.`)
-// })
+$("#spain").click(() => {
+    $("#ej2").text("Ejercicio 2");
+    $("#p2").text(`Crea una página con un selector de idioma para una noticia.
+    Dependiendo del idioma que selecciones, haz que cambie el idioma tanto del titular
+    como del cuerpo de la noticia.`)
+})
 
-// $("#uk").click(() => {
-//     $("#ej2").text("Exercise 2");
-//     $("#p2").text(`Create a page with a language selector for a news item. 
-//     Depending on the language you select, make it change the language of both
-//     the headline and the body of the news.`)
-// })
+$("#uk").click(() => {
+    $("#ej2").text("Exercise 2");
+    $("#p2").text(`Create a page with a language selector for a news item. 
+    Depending on the language you select, make it change the language of both
+    the headline and the body of the news.`)
+})
 
 /**------------------------------------------ */
 
-//Ejercicio 3
+//Ej 3
 
 /**
  *Crea un selector de fotos. La página debe tener una imagen de gran tamaño seguida
@@ -91,24 +91,24 @@ $("#img4").click(() => {
 })
 
 
-// PARTE 2
+// ------------------------------EJERCICIO 2------------------------------------------------
 
 
-$("#cambiarLetra").click(() => {
+$("#cambiarLetra2").click(() => {
     $("#p1").slideUp(1000, () => {
         $("#p1").css("font-size", "small");
         $("#p1").slideDown();
     })
 })
 
-$("#cambiarFuente").click(() => {
+$("#cambiarFuente2").click(() => {
     $("#p1").slideUp(1000, () => {
         $("#p1").css("font-family", "arial");
         $("#p1").slideDown();
     })
 })
 
-$("#cambiarColor").click(() => {
+$("#cambiarColor2").click(() => {
     $("#ej1").slideUp(1000, () => {
         $("#ej1").css("color", "blue");
         $("#ej1").slideDown();
@@ -116,7 +116,7 @@ $("#cambiarColor").click(() => {
 })
 
 
-$("#france").click(() => {
+$("#france2").click(() => {
     $("#ej2, #p2").fadeOut(1000, () => {
         $("#ej2").text("Exercer 2");
         $("#p2").text(`Créez une page avec un sélecteur de langue pour une actualité. 
@@ -127,7 +127,7 @@ $("#france").click(() => {
 })
 
 
-$("#spain").click(() => {
+$("#spain2").click(() => {
     $("#ej2, #p2").fadeOut(1000, () => {
         $("#ej2").text("Ejercicio 2");
         $("#p2").text(`Crea una página con un selector de idioma para una noticia.
@@ -137,7 +137,7 @@ $("#spain").click(() => {
     })
 })
 
-$("#uk").click(() => {
+$("#uk2").click(() => {
     $("#ej2, #p2").fadeOut(1000, () => {
         $("#ej2").text("Exercise 2");
         $("#p2").text(`Create a page with a language selector for a news item. 
@@ -147,4 +147,55 @@ $("#uk").click(() => {
     })
 })
 
+// --------------------------------------------EJERCICIO 3----------------------------------------
 
+let red = true;
+$("#box1").dblclick(() => {
+    if (red) {
+        $("#box1").css("background-color", "green");
+        red = false;
+    } else {
+        $("#box1").css("background-color", "red");
+        red = true;
+    }
+})
+
+let black = true;
+$("#box2").dblclick(() => {
+    if (black) {
+        $("#box2").css("background-color", "white");
+        black = false;
+    } else {
+        $("#box2").css("background-color", "black");
+        black = true;
+    }
+})
+
+let purple = true;
+$("#box3").dblclick(() => {
+    if (purple) {
+        $("#box3").css("background-color", "yellow");
+        purple = false;
+    } else {
+        $("#box3").css("background-color", "purple");
+        purple = true;
+    }
+})
+
+
+$(window).scroll(() => {
+    if ($(window).scrollTop() > 0) {
+        $("#scrollToTop").css("display", "inline");
+    } else {
+        $("#scrollToTop").css("display", "none");
+    }
+})
+
+$("#scrollToTop").click(() => {
+    $("body, html").animate({ scrollTop: 0 }, 300);
+})
+
+$("#formulario").submit((e) => {
+    e.preventEventDefault();
+    
+})
