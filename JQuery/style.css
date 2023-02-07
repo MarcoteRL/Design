@@ -54,3 +54,7 @@ body {
     color: black;
     border: 3px solid black;
 }
+
+.bold{
+    font-weight: 500;
+}

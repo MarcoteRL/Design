@@ -26,49 +26,57 @@
 
 
         <div class="container d-flex">
-            <form id="formulario col-8">
+            <form id="formulario" class="mx-5 col-6">
                 <div class="form-row mt-5">
-                    <div class="col-md-3 mb-3">
-                        <label for="validationDefault01">First name</label>
-                        <input type="text" class="form-control"
-                            id="validationDefault01" placeholder="First name"
-                            value="Mark" required>
+                    <div class="mb-3">
+                        <label for="validationDefault01">Nombre</label>
+                        <input type="text" class="form-control" name="nombre"
+                            id="validationDefault01" placeholder="Nombre"
+                            required>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationDefault02">Last name</label>
-                        <input type="text" class="form-control"
-                            id="validationDefault02" placeholder="Last name"
-                            value="Otto" required>
+                    <div class="mb-3">
+                        <label for="validationDefault02">Apellido</label>
+                        <input type="text" class="form-control" name="apellido"
+                            id="validationDefault02" placeholder="Apellido"
+                            required>
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-3 mb-3">
-                        <label for="validationDefault03">City</label>
-                        <input type="text" class="form-control"
-                            id="validationDefault03" placeholder="City"
+                    <div class="mb-3">
+                        <label for="validationDefault03">Edad</label>
+                        <input type="text" class="form-control" name="edad"
+                            id="validationDefault03" placeholder="Edad"
                             required>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationDefault04">State</label>
-                        <input type="text" class="form-control"
-                            id="validationDefault04" placeholder="State"
+                    <div class="mb-3">
+                        <label for="validationDefault04">Ciudad</label>
+                        <input type="text" class="form-control" name="ciudad"
+                            id="validationDefault04" placeholder="Ciudad"
                             required>
                     </div>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit form</button>
             </form>
 
-            <div class="card" style="width: 18rem;" class="col-6">
-                <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card" style="width: 18rem;" class="mx-5">
+                <img class="card-img-top" src="img/avatar.avif" alt="Card image
+                    cap">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the
-                        card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">Usuario</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item item-nombre"><span
+                                class="bold">Nombre:</span> </li>
+                        <li class="list-group-item item-apellido"><span
+                                class="bold">Apellido:</span>
+                        </li>
+                        <li class="list-group-item item-edad"><span
+                                class="bold">Edad:</span> </li>
+                        <li class="list-group-item item-ciudad"><span
+                                class="bold">Ciudad:</span> </li>
+                    </ul>
                 </div>
             </div>
         </div>
-
 
         <button id="scrollToTop"><p>^</p></button>
 

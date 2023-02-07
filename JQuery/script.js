@@ -196,6 +196,14 @@ $("#scrollToTop").click(() => {
 })
 
 $("#formulario").submit((e) => {
-    e.preventEventDefault();
-    
+    e.preventDefault();
+    let inputs = $("#formulario :input");
+    let values = {};
+    inputs.each(function () {
+        values[this.name] = $(this).val();
+    });
+    $(".item-nombre").append(values["nombre"]);
+    $(".item-apellido").append(values["apellido"]);
+    $(".item-edad").append(values["edad"]);
+    $(".item-ciudad").append(values["ciudad"]);
 })
