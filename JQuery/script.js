@@ -207,3 +207,33 @@ $("#formulario").submit((e) => {
     $(".item-edad").append(values["edad"]);
     $(".item-ciudad").append(values["ciudad"]);
 })
+
+
+// --------------------------------------------EJERCICIO 4----------------------------------------
+$("#formulario2").keypress((e) => {
+    console.log(e.key);
+    switch (e.key) {
+        case "a":
+            $('.cuadrado').css({ marginLeft: '-=15px' });
+            break;
+        case "w":
+            $('.cuadrado').css({ marginTop: '-=15px' });
+            break;
+        case "s":
+            $('.cuadrado').css({ marginTop: '+=15px' });
+            break;
+        case "d":
+            $('.cuadrado').css({ marginLeft: '+=15px' });
+            break;
+        case "+":
+            $('.cuadrado').css({ width: '+=15px' });
+            $('.cuadrado').css({ height: '+=15px' });
+            break;
+        case "-":
+            $('.cuadrado').css({ width: '-=15px' });
+            $('.cuadrado').css({ height: '-=15px' });
+            break;
+        default:
+            break;
+    }
+})

@@ -58,3 +58,9 @@ body {
 .bold{
     font-weight: 500;
 }
+
+.cuadrado{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
