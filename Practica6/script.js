@@ -7,17 +7,20 @@ let dt = new Date();
 let year = dt.getFullYear();
 let month = "";
 let day = "";
-let mes = dt.getMonth() + 1
+let mes = dt.getMonth() + 1;
+
 if (dt.getMonth() < 10) {
     month = "0" + mes;
 } else {
     month = mes;
 }
+
 if (dt.getDate() < 10) {
     day = "0" + dt.getDate();
 } else {
     day = dt.getDate();
 }
+
 let fechaHoy = {
     year: year,
     month: month,
@@ -25,7 +28,6 @@ let fechaHoy = {
 }
 
 let hoy = year + "-" + month + "-" + day;
-
 
 async function setTimeAppointment() {
     let pushed = [];
