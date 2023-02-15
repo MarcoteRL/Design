@@ -3,10 +3,7 @@
 let citas = [
 ]
 
-console.log(citas.includes("09.00"));
-
 async function setTimeAppointments() {
-    // $("#hora")
     let pushed = [];
     for (let i = 0; i <= 23; i++) {
         if (citas.length > 0) {
@@ -32,13 +29,13 @@ async function setTimeAppointments() {
 }
 
 async function addCita() {
-    console.log($("#hora option:selected").text());
     citas.push({
         nombre: $("input[name=nombre]").val(),
         fecha: $("input[name=fecha]").val(),
         hora: $("#hora option:selected").text()
     }
     );
+    $("#hora option").delete()
     await setTimeAppointments();
     await showTable();
 }
