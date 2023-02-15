@@ -18,31 +18,31 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Pedir Cita</h1>
-        <div class="container mt-5">
+        <!-- <h1>Pedir Cita</h1> -->
+        <div class="container mt-5 justify-content-center">
             <div class="row">
-                <div class="col-5 px-5">
+
+                <div class="col-12 col-xl-6 px-5">
+                    <div id="table-responsive" class="p-4"></div>
+                </div>
+
+                <div class="col-12 col-xl-5 px-5 mt-5 mt-xl-0">
                     <form action="" id="formulario" class="text-center border
                         border-light p-5">
                         <input type="text" name="nombre" id=""
                             class="form-control
-                            mb-4" placeholder="Introduce tu nombre">
+                            mb-4" placeholder="Introduce tu nombre" required>
                         <input type="date" name="fecha" id=""
                             class="form-control
-                            mb-4">
-                        <select name="hora" id="hora" class="form-control mb-4">
+                            mb-4" required>
+                        <select name="hora" id="hora" class="form-control mb-4"
+                            required>
                         </select>
-                        <input type="submit" value="enviar" class="btn btn-info
+                        <input type="submit" value="ENVIAR" class="btn btn-info
                             btn-block col-12">
                     </form>
                 </div>
-
-
-                <div class="col-6 px-5">
-                    <div id="table-responsive" class="p-4"></div>
-                </div>
             </div>
-
 
         </div>
 
