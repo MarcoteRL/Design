@@ -106,5 +106,6 @@ async function showTable() {
     $('#table-responsive').append(table);
 }
 
+
 setTimeAppointment();
 showTable();
