@@ -3,6 +3,9 @@
 let citas = [
 ]
 
+let admin = { user: "admin", pass: "admin" };
+let login = false;
+
 let dt = new Date();
 let year = dt.getFullYear();
 let month = "";
@@ -99,13 +102,33 @@ async function showTable() {
     </tr>`;
 
     for (let i = 0; i < citas.length; i++) {
-        console.log(citas[i].nombre);
-        table += '<tr><td>' + citas[i].nombre + '</td><td>' + citas[i].fecha + '</td><td>' + citas[i].hora + '</td></tr>';
+        table += '<tr><td>' + citas[i].nombre +
+            '</td><td>' + citas[i].fecha + '</td><td>' + citas[i].hora + '</td>';
+        if (login) {
+            table += `<td class="trash" id="${i}"><i class="fa-solid fa-trash"></i></td>` +
+                '</tr>';
+        } else {
+            table += '</tr>'
+        }
     }
     table += "</table>";
     $('#table-responsive').append(table);
+    $(".trash").click(function (e) {
+        e.preventDefault();
+    })
 }
 
+$(".login").submit(function (e) {
+    e.preventDefault();
+    let usuario = $("input[name=user]").val();
+    let password = $("input[name=pass]").val();
+    if (usuario == admin.user && password == admin.pass) {
+        login = true;
+        $(".login").replaceWith($("<h4 class='d-flex ms-auto mr-3'>" + "Panel de Administrador" + "</h4>"));
+    } else {
+        login = false;
+    }
+});
 
 setTimeAppointment();
 showTable();
