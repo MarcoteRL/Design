@@ -34,7 +34,6 @@ let hoy = year + "-" + month + "-" + day;
 
 async function setTimeAppointment() {
     $("#hora option").remove();
-    console.log(citas);
     let pushed = [];
     for (let i = 9; i <= 21; i++) {
         if (citas.length > 0) {
@@ -60,8 +59,6 @@ async function setTimeAppointment() {
 }
 
 async function addCita() {
-    console.log($("#hora option:selected").text());
-    console.log(citas);
     if (citas.length == 0) {
         citas.push({
             nombre: $("input[name=nombre]").val(),
@@ -73,8 +70,6 @@ async function addCita() {
     }
     if (citas.some((element) => {
         let splitted = $("input[name=fecha]").val().split("-");
-        console.log(element.fecha == $("input[name=fecha]").val() && element.hora == $("#hora option:selected").text() || splitted[0] < fechaHoy.year ||
-            splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day);
         return element.fecha == $("input[name=fecha]").val() &&
             element.hora == $("#hora option:selected").text() || splitted[0] < fechaHoy.year ||
             splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day
@@ -111,19 +106,19 @@ async function showTable() {
         table += '<tr><td>' + citas[i].nombre +
             '</td><td>' + citas[i].fecha + '</td><td>' + citas[i].hora + '</td>';
         if (login) {
-            console.log("Entro");
             table += `<td class="trash"><i class="fa-solid fa-trash" id="${i}"></i></td>` +
                 '</tr>';
         } else {
-            console.log("NOO");
             table += '</tr>'
         }
     }
     table += "</table>";
     $('#table-responsive').append(table);
-    $('#table-responsive').removeClass("d-none")
-    $(".trash").click(function (e) {
+    $('.container-tabla').removeClass("d-none")
+    $(".trash").click(async function (e) {
         e.preventDefault();
+        citas.splice(e.target.id, 1);
+        await showTable();
     })
 }
 
@@ -131,11 +126,12 @@ $(".login").submit(function (e) {
     e.preventDefault();
     let usuario = $("input[name=user]").val();
     let password = $("input[name=pass]").val();
-    console.log(usuario, password);
     if (usuario == admin.user && password == admin.pass) {
         login = true;
         $(".login").replaceWith($("<h4 class='d-flex ms-auto mr-3'>" + "Panel de Administrador" + "</h4>"));
-        showTable();
+        if (citas.length > 0) {
+            showTable();
+        }
     } else {
         login = false;
     }
@@ -147,15 +143,3 @@ if (login) {
         alert("button");
     });
 }
-
-function hasClass(elem, className) {
-    return elem.className.split(' ').indexOf(className) > -1;
-}
-
-document.addEventListener('click', async function (e) {
-    if (hasClass(e.target, 'fa-trash')) {
-        console.log(e.target.id);
-        citas.splice(e.target.id, 1);
-        await showTable();
-    }
-}, false);
