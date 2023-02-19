@@ -1,15 +1,28 @@
-*{
+* {
     margin: 0;
 }
 
-#formulario{
-    background-color: rgb(247, 250, 253);
-    /* border-radius: 15px;
-    box-shadow: 0px 0px 16px 7px rgba(0,0,0,0.52); */
+body {
+    background-color: #474747;
 }
 
-#table-responsive{
+#formulario {
     background-color: rgb(247, 250, 253);
-    /* border-radius: 5px; */
-    /* box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.52); */
+    border-radius: 15px;
+    box-shadow: 0px 0px 16px 7px rgba(0, 0, 0, 0.52);
+}
+
+#table-responsive {
+    background-color: rgb(247, 250, 253);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.52);
+}
+
+.navbar {
+    background-color: #0000003d !important;
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

@@ -33,6 +33,8 @@ let fechaHoy = {
 let hoy = year + "-" + month + "-" + day;
 
 async function setTimeAppointment() {
+    $("#hora option").remove();
+    console.log(citas);
     let pushed = [];
     for (let i = 9; i <= 21; i++) {
         if (citas.length > 0) {
@@ -59,6 +61,7 @@ async function setTimeAppointment() {
 
 async function addCita() {
     console.log($("#hora option:selected").text());
+    console.log(citas);
     if (citas.length == 0) {
         citas.push({
             nombre: $("input[name=nombre]").val(),
@@ -70,6 +73,8 @@ async function addCita() {
     }
     if (citas.some((element) => {
         let splitted = $("input[name=fecha]").val().split("-");
+        console.log(element.fecha == $("input[name=fecha]").val() && element.hora == $("#hora option:selected").text() || splitted[0] < fechaHoy.year ||
+            splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day);
         return element.fecha == $("input[name=fecha]").val() &&
             element.hora == $("#hora option:selected").text() || splitted[0] < fechaHoy.year ||
             splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day
@@ -90,6 +95,7 @@ $("#formulario").submit(async (e) => {
     e.preventDefault();
     await addCita();
     await showTable();
+    await setTimeAppointment();
 })
 
 async function showTable() {
@@ -98,21 +104,24 @@ async function showTable() {
     table += `<tr>
     <th scope="col">Nombre</th>
     <th scope="col">Fecha</th>
-    <th scope="col">Hora</th>
+    <th colspan=2 scope="col">Hora</th>
     </tr>`;
 
     for (let i = 0; i < citas.length; i++) {
         table += '<tr><td>' + citas[i].nombre +
             '</td><td>' + citas[i].fecha + '</td><td>' + citas[i].hora + '</td>';
         if (login) {
-            table += `<td class="trash" id="${i}"><i class="fa-solid fa-trash"></i></td>` +
+            console.log("Entro");
+            table += `<td class="trash"><i class="fa-solid fa-trash" id="${i}"></i></td>` +
                 '</tr>';
         } else {
+            console.log("NOO");
             table += '</tr>'
         }
     }
     table += "</table>";
     $('#table-responsive').append(table);
+    $('#table-responsive').removeClass("d-none")
     $(".trash").click(function (e) {
         e.preventDefault();
     })
@@ -122,13 +131,31 @@ $(".login").submit(function (e) {
     e.preventDefault();
     let usuario = $("input[name=user]").val();
     let password = $("input[name=pass]").val();
+    console.log(usuario, password);
     if (usuario == admin.user && password == admin.pass) {
         login = true;
         $(".login").replaceWith($("<h4 class='d-flex ms-auto mr-3'>" + "Panel de Administrador" + "</h4>"));
+        showTable();
     } else {
         login = false;
     }
 });
-
 setTimeAppointment();
-showTable();
+
+if (login) {
+    $(".fa-solid .fa-trash").click(function () {
+        alert("button");
+    });
+}
+
+function hasClass(elem, className) {
+    return elem.className.split(' ').indexOf(className) > -1;
+}
+
+document.addEventListener('click', async function (e) {
+    if (hasClass(e.target, 'fa-trash')) {
+        console.log(e.target.id);
+        citas.splice(e.target.id, 1);
+        await showTable();
+    }
+}, false);
