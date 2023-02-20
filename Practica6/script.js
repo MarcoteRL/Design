@@ -90,7 +90,6 @@ $("#formulario").submit(async (e) => {
     e.preventDefault();
     await addCita();
     await showTable();
-    await setTimeAppointment();
 })
 
 async function showTable() {
@@ -143,3 +142,5 @@ if (login) {
         alert("button");
     });
 }
+
+setTimeAppointment();
