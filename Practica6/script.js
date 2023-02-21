@@ -38,18 +38,12 @@ async function setTimeAppointment() {
     for (let i = 9; i <= 21; i++) {
         if (citas.length > 0) {
             citas.forEach((element) => {
-                if (i < 10 && !pushed.includes(`${i}:00`)) {
-                    i = `0${i}`;
-                }
                 if (element.hora != `${i}:00` && !pushed.includes(`${i}:00`)) {
                     $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
                     pushed.push(`${i}:00`)
                 }
             })
         } else {
-            if (i < 10 && !pushed.includes(`${i}:00`)) {
-                i = `0${i}`;
-            }
             if (!pushed.includes(`${i}:00`)) {
                 $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
                 pushed.push(`${i}:00`)
@@ -59,6 +53,8 @@ async function setTimeAppointment() {
 }
 
 async function addCita() {
+    $(".alert").removeClass("alert-danger");
+    $(".alert").text("");
     if (citas.length == 0) {
         citas.push({
             nombre: $("input[name=nombre]").val(),
@@ -75,6 +71,9 @@ async function addCita() {
             splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day
 
     })) {
+        $(".alert").addClass("alert-danger");
+        $(".alert").fadeIn(200).delay(600).fadeOut(400);
+        $(".alert").text("No disponible");
         return;
     } else {
         citas.push({
@@ -85,12 +84,6 @@ async function addCita() {
         );
     }
 }
-
-$("#formulario").submit(async (e) => {
-    e.preventDefault();
-    await addCita();
-    await showTable();
-})
 
 async function showTable() {
     $("table").remove();
@@ -135,7 +128,13 @@ $(".login").submit(function (e) {
         login = false;
     }
 });
-setTimeAppointment();
+
+$("#formulario").submit(async (e) => {
+    e.preventDefault();
+    await addCita();
+    await showTable();
+})
+
 
 if (login) {
     $(".fa-solid .fa-trash").click(function () {
