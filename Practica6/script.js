@@ -1,8 +1,6 @@
 "use strict";
 
-let citas = [
-]
-
+let citas = [];
 let admin = { user: "admin", pass: "admin" };
 let login = false;
 
@@ -69,8 +67,8 @@ async function addCita() {
         return element.fecha == $("input[name=fecha]").val() &&
             element.hora == $("#hora option:selected").text() || splitted[0] < fechaHoy.year ||
             splitted[1] < fechaHoy.month || splitted[2] < fechaHoy.day
-
-    })) {
+    })
+    ) {
         $(".alert").addClass("alert-danger");
         $(".alert").fadeIn(200).delay(600).fadeOut(400);
         $(".alert").text("No disponible");
