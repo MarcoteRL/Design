@@ -3,13 +3,8 @@
 }
 
 @font-face {
-    font-family: "Oni";
-    src: url(font/NightinTokyo.ttf);
-}
-
-@font-face {
-    font-family: "Oni Bold";
-    src: url(font/NightinTokyo-Bold.ttf);
+    font-family: "Osaka";
+    src: url(font/go3v2.ttf);
 }
 
 body {
@@ -35,7 +30,16 @@ body {
 }
 
 .navbar {
-    background-color: #0000008c !important;
+    background-color: #554f4f8c !important;
+    backdrop-filter: blur(15px) brightness(75%) saturate(70%);
+}
+
+footer {
+    background-color: #2e2d2d !important;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    color: white;
 }
 
 .navbar-toggler {
@@ -56,15 +60,26 @@ body {
 }
 
 .letra-logo {
-    font-family: "Oni Bold";
+    font-family: "Osaka";
     font-size: 2rem;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-weight: 900;
+    /* text-shadow: 2px 2px 2px rgba(206, 89, 55, 0); */
+    color: black;
+    letter-spacing: 3px;
+    font-size: 35px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 2px 2px 2px rgba(255, 255, 255, 0);
 }
 
 .fa-solid:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.btn-login{
+    border-color: none !important;
+    /* color: #C61D2E; */
 }
 
 h4 {
@@ -81,14 +96,20 @@ h1 {
     color: red !important;
 }
 
-/* .fade {
-    opacity: 0;
-    -webkit-transition: opacity 0.15s linear;
-    -moz-transition: opacity 0.15s linear;
-    -o-transition: opacity 0.15s linear;
-    transition: opacity 0.15s linear;
+.enviar {
+    background-color: black !important;
+    color: white;
+    font-weight: bold;
+    border: none;
 }
 
-.fade.in {
-    opacity: 1;
-} */
+.enviar[value]:hover {
+    background-color: #C61D2E !important;
+    color: white !important;
+}
+
+input:focus, select:focus{
+    box-shadow: none !important;
+    outline: none !important;
+    border-color: rgb(95, 10, 10) !important;
+}
