@@ -31,7 +31,7 @@ body {
 
 .navbar {
     background-color: #554f4f8c !important;
-    backdrop-filter: blur(15px) brightness(75%) saturate(70%);  
+    backdrop-filter: blur(15px) brightness(75%) saturate(70%);
 }
 
 footer {
@@ -79,7 +79,6 @@ footer {
 
 .btn-login {
     border-color: none !important;
-    /* color: #C61D2E; */
 }
 
 h4 {
