@@ -133,11 +133,4 @@ $("#formulario").submit(async (e) => {
     await showTable();
 })
 
-
-if (login) {
-    $(".fa-solid .fa-trash").click(function () {
-        alert("button");
-    });
-}
-
 setTimeAppointment();
