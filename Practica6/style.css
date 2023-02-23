@@ -7,6 +7,10 @@
     src: url(font/go3v2.ttf);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-image: url(img/background.jpg);
     background-repeat: no-repeat;
@@ -16,6 +20,14 @@ body {
     height: 100%;
 }
 
+footer {
+    margin-top: 2%;
+    background-color: #2e2d2d !important;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    color: white;
+}
 
 #formulario {
     background-color: rgb(247, 250, 253);
@@ -32,14 +44,6 @@ body {
 .navbar {
     background-color: #554f4f8c !important;
     backdrop-filter: blur(15px) brightness(75%) saturate(70%);
-}
-
-footer {
-    background-color: #2e2d2d !important;
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
-    color: white;
 }
 
 .navbar-toggler {
@@ -111,4 +115,9 @@ input:focus, select:focus {
     box-shadow: none !important;
     outline: none !important;
     border-color: rgb(95, 10, 10) !important;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
 }
