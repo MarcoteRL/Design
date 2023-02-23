@@ -30,6 +30,9 @@ let fechaHoy = {
 
 let hoy = year + "-" + month + "-" + day;
 
+/**
+ * Función que muestra las horas para poder concertar las citas.
+ */
 async function setTimeAppointment() {
     $("#hora option").remove();
     let pushed = [];
@@ -50,6 +53,10 @@ async function setTimeAppointment() {
     }
 }
 
+/**
+ * Función que verifica si la cita está disponible y la añade al array de citas.
+ * @returns 
+ */
 async function addCita() {
     $(".alert").removeClass("alert-danger");
     $(".alert").text("");
@@ -83,6 +90,9 @@ async function addCita() {
     }
 }
 
+/**
+ * Función que recorre el array de citas y va creando la tabla.
+ */
 async function showTable() {
     $("table").remove();
     let table = `<table class="table table-responsive">`;
@@ -112,6 +122,10 @@ async function showTable() {
     })
 }
 
+/**
+ * Recoge el submit de inicio de sesión y comprueba si el usuario y contraseña son correctos.
+ * Si son correctos muestra la tabla y cambia la variable login a true.
+ */
 $(".login").submit(function (e) {
     e.preventDefault();
     let usuario = $("input[name=user]").val();
@@ -127,6 +141,10 @@ $(".login").submit(function (e) {
     }
 });
 
+
+/**
+ * Recoge el submit del formulario y llama a las siguientes funciones.
+ */
 $("#formulario").submit(async (e) => {
     e.preventDefault();
     await addCita();
