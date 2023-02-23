@@ -31,7 +31,7 @@ body {
 
 .navbar {
     background-color: #554f4f8c !important;
-    backdrop-filter: blur(15px) brightness(75%) saturate(70%);
+    backdrop-filter: blur(15px) brightness(75%) saturate(70%);  
 }
 
 footer {
@@ -77,7 +77,7 @@ footer {
     cursor: pointer;
 }
 
-.btn-login{
+.btn-login {
     border-color: none !important;
     /* color: #C61D2E; */
 }
@@ -108,7 +108,7 @@ h1 {
     color: white !important;
 }
 
-input:focus, select:focus{
+input:focus, select:focus {
     box-shadow: none !important;
     outline: none !important;
     border-color: rgb(95, 10, 10) !important;
