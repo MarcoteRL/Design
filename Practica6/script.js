@@ -123,13 +123,10 @@ async function showTable() {
     $('.container-tabla').removeClass("d-none")
     $(".trash").click(async function (e) {
         e.preventDefault();
-        console.log("cita: ", citas[e.target.id]);
-        console.log(citasProg[fecha].indexOf(citas[e.target.id].hora));
         citasProg[fecha].splice(citasProg[fecha].indexOf(citas[e.target.id].hora), 1)
         citas.splice(e.target.id, 1);
         await setTimeAppointment();
         await showTable();
-        console.log(citasProg);
     })
 }
 
