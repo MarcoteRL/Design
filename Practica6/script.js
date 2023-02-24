@@ -1,6 +1,7 @@
 "use strict";
 
 let citas = [];
+let citasProg = {};
 let admin = { user: "admin", pass: "admin" };
 let login = false;
 
@@ -34,16 +35,15 @@ let hoy = year + "-" + month + "-" + day;
  * Función que muestra las horas para poder concertar las citas.
  */
 async function setTimeAppointment() {
+    let fecha = $("input[name=fecha]").val();
     $("#hora option").remove();
     let pushed = [];
     for (let i = 9; i <= 21; i++) {
-        if (citas.length > 0) {
-            citas.forEach((element) => {
-                if (element.hora != `${i}:00` && !pushed.includes(`${i}:00`)) {
-                    $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
-                    pushed.push(`${i}:00`)
-                }
-            })
+        if (citas.length > 0 && citasProg[fecha] != undefined) {
+            if (!citasProg[fecha].includes(`${i}:00`) && !pushed.includes(`${i}:00`)) {
+                $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
+                pushed.push(`${i}:00`)
+            }
         } else {
             if (!pushed.includes(`${i}:00`)) {
                 $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
@@ -65,8 +65,8 @@ async function addCita() {
             nombre: $("input[name=nombre]").val(),
             fecha: $("input[name=fecha]").val(),
             hora: $("#hora option:selected").text()
-        }
-        );
+        });
+        citasProg[$("input[name=fecha]").val()] = [$("#hora option:selected").text()];
         return;
     }
     if (citas.some((element) => {
@@ -85,15 +85,21 @@ async function addCita() {
             nombre: $("input[name=nombre]").val(),
             fecha: $("input[name=fecha]").val(),
             hora: $("#hora option:selected").text()
+        });
+        if (citasProg[$("input[name=fecha]").val()] == undefined) {
+            citasProg[$("input[name=fecha]").val()] = [$("#hora option:selected").text()];
+        } else {
+            citasProg[$("input[name=fecha]").val()].push($("#hora option:selected").text())
         }
-        );
     }
 }
+
 
 /**
  * Función que recorre el array de citas y va creando la tabla.
  */
 async function showTable() {
+    let fecha = $("input[name=fecha]").val();
     $("table").remove();
     let table = `<table class="table table-responsive">`;
     table += `<tr>
@@ -117,8 +123,13 @@ async function showTable() {
     $('.container-tabla').removeClass("d-none")
     $(".trash").click(async function (e) {
         e.preventDefault();
+        console.log("cita: ", citas[e.target.id]);
+        console.log(citasProg[fecha].indexOf(citas[e.target.id].hora));
+        citasProg[fecha].splice(citasProg[fecha].indexOf(citas[e.target.id].hora), 1)
         citas.splice(e.target.id, 1);
+        await setTimeAppointment();
         await showTable();
+        console.log(citasProg);
     })
 }
 
@@ -148,6 +159,7 @@ $(".login").submit(function (e) {
 $("#formulario").submit(async (e) => {
     e.preventDefault();
     await addCita();
+    await setTimeAppointment();
     await showTable();
 })
 
