@@ -43,11 +43,15 @@ async function setTimeAppointment() {
             if (!citasProg[fecha].includes(`${i}:00`) && !pushed.includes(`${i}:00`)) {
                 $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
                 pushed.push(`${i}:00`)
+            }else{
+                $('#hora').append(`<option value="${i}:00" disabled>${i}:00</option>`);
             }
         } else {
             if (!pushed.includes(`${i}:00`)) {
                 $('#hora').append(`<option value="${i}:00">${i}:00</option>`);
                 pushed.push(`${i}:00`)
+            }else{
+                $('#hora').append(`<option value="${i}:00" disabled>${i}:00</option>`);
             }
         }
     }
